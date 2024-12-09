@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALEX WAS HERE</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            background-image: url('https://alexlegos3.blob.core.windows.net/alex3/alex3.jfif?sp=r&st=2024-12-02T08:31:40Z&se=2024-12-02T16:31:40Z&spr=https&sv=2022-11-02&sr=b&sig=2bV9Q%2B%2FzDUAUN2IvFmJRKkmjQke0Gp8f0Rusjvw2VfY%3D');
+            background-size: cover;
+            background-position: center;
+            color: white; /* White text to contrast with the background */
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 36px;
+            color: #fff; /* Ensure the heading is visible on the background */
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            width: 70%;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+        .button {
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            color: white;
+            text-align: center;
+            display: inline-block;
+            margin: 5px;
+        }
+        .green {
+            background-color: green;
+        }
+        .red {
+            background-color: red;
+        }
+        .facebook {
+            background-color: #3b5998;
+        }
+        .youtube {
+            background-color: #FF0000;
+        }
+        .instagram {
+            background-color: #C13584;
+        }
+        .like-button {
+            background-color: #008CBA;
+            color: white;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        .like-counter {
+            font-size: 20px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>ALEX WAS HERE</h1>
+    <div class="container">
+        <a href="https://alexlegos3.blob.core.windows.net/alex3/alex2.mp4?sp=r&st=2024-12-02T07:57:14Z&se=2024-12-02T15:57:14Z&spr=https&sv=2022-11-02&sr=b&sig=%2BqO0AoH9IoHOwvAu%2F77WznUwSnmnxxOsLx2ulSl3M8w%3D" class="button green" target="_blank">Green Button</a>
+        <a href="https://alexlegos3.blob.core.windows.net/alex3/alex2.mp4?sp=r&st=2024-12-02T07:57:14Z&se=2024-12-02T15:57:14Z&spr=https&sv=2022-11-02&sr=b&sig=%2BqO0AoH9IoHOwvAu%2F77WznUwSnmnxxOsLx2ulSl3M8w%3D" class="button red" target="_blank">Red Button</a>
+        <a href="https://www.facebook.com" class="button facebook" target="_blank">Facebook</a>
+        <a href="https://www.youtube.com" class="button youtube" target="_blank">YouTube</a>
+        <a href="https://www.instagram.com" class="button instagram" target="_blank">Instagram</a>
+    </div>
+    
+    <!-- Like Button Section -->
+    <button class="button like-button" onclick="incrementLikes()">Like</button>
+    <div id="likeCounter" class="like-counter">Likes: 0</div>
+
+    <script>
+        // Check if there's a saved like count in localStorage
+        let likeCount = localStorage.getItem('likeCount') ? parseInt(localStorage.getItem('likeCount')) : 0;
+
+        // Update the displayed like count on page load
+        document.getElementById('likeCounter').textContent = "Likes: " + likeCount;
+
+        // Function to increment likes and save the new count
+        function incrementLikes() {
+            likeCount++;
+            // Update the displayed like count
+            document.getElementById('likeCounter').textContent = "Likes: " + likeCount;
+            // Save the updated like count in localStorage
+            localStorage.setItem('likeCount', likeCount);
+        }
+    </script>
+</body>
+</html>
